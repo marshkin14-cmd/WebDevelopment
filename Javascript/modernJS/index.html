@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let name = "John"
+        let age = "22"
+
+        console.log("Good Morning my name is " + name + " and I am " + age + "yrs old")
+
+        // modern way - template - back tick: ` ${variableName/Parameter} `
+        console.log(`
+        Dear ${name},
+        are you ${age} yrs old?
+        `)
+
+        // spread operator: ... 3 dots (symbol) - make a duplicate
+        
+        let fruits = ["Mango", "Apple"]
+        let veggies = ["Tomato", "Carrot"]
+
+        let shoppingItems = [...veggies, "Milk", "Bread", ...fruits]
+        console.log(shoppingItems)
+
+        // syntax setTimeout(function(){}, time) 1000 == 1s
+        setTimeout(function(){console.log("hellow guys wsg")}, 5000)
+        setTimeout(()=>{console.log("payment successful")}, 3000)
+
+        setInterval(()=>{console.log("every 2 s")}, 2000)
+    </script>
+</body>
+</html>
