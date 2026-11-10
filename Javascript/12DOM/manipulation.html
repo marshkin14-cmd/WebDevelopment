@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="update()">Add To Cart</button>
+    <p id="myp"></p>
+
+    <button id="btn" onclick="updateLogin()">Login</button>
+
+    <div id="myDiv">This is Normal Div</div>
+    <button onclick="updateTag()">Update Tag</button>
+
+    <p id="old">This is Old Dull Paragraph...</p>
+    <button onclick="updateStyle()">Style</button>
+    <script>
+        function update(){
+            // 1. select the element/tag
+            const p = document.getElementById("myp")
+
+            // 2. update content
+            p.textContent = "Product Added To Cart"
+        }
+
+        function updateLogin(){
+            const btn = document.getElementById("btn")
+            btn.textContent = "Logout"
+        }
+
+        // 3. innerHTML - update the tag itself
+        function updateTag(){
+            const box = document.getElementById("myDiv")
+
+            // update by 1 tag
+            // box.innerHTML = "<h1>This is Heading</h1>"
+
+            // update by multiple tags
+            box.innerHTML = `
+            <h2>Hello User</h2>
+            <button>Greet</button>
+            <p>This is DOM magic</p>
+            `
+        }
+
+        function updateStyle(){
+            const para = document.getElementById("old")
+
+            //.style.propName
+            para.style.color = "red"
+            para.style.backgroundColor = "aqua"
+        }
+    </script>
+</body>
+</html>

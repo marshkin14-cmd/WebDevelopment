@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="myp">Hello Good Evening</p>
+
+    <div class="abc">This is div - 0</div>
+    <div class="abc">This is div - 1</div>
+
+    <p>This is second paragraph</p>
+
+    <div class="xyz">NETFLIX - OTT</div>
+    <div class="xyz">AMAZON - ECOM</div>
+
+    <script>
+    // individual tag - selecting it by ID
+    // document - webpage in jss
+    // element - HTML Tag
+
+    const paragraphTag = document.getElementById("myp")
+    console.log(paragraphTag)
+    console.log(paragraphTag.textContent)
+
+    //class name
+    const boxes = document.getElementsByClassName(abc)
+    console.log(boxes)
+    
+    // Tagname
+    const para = document.getElementsByTagName("p")
+    console.log(para)
+    console.log(para[0])
+    console.log(para[1].textContent)
+
+    // query selector : follows CSS selector rule : midName, .className, tag
+    // it will only select the first element/tag
+    const container = document.querySelector(".xyz")
+    console.log(container)
+
+    //for sleecting all use querySelectorALL
+    const boxC = document.querySelectorAll(".xyz")
+    console.log(boxC)
+
+    </script>
+</body>
+</html>

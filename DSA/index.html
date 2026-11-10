@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. find the second largest unique number without sorting of array
+
+        Input : [45,80,90,65,90,70]
+        Output : 80
+
+        function secondLargest(arr){
+
+            let largest = -Infinity
+            let secondLargest = -Infinity
+
+            //Travel Inside Array
+            for(let i = 0; i<arr.length; i++){
+                if(arr[i]>largest){
+                    secondLargest = largest
+                    largest = arr[i]
+                }
+                else if(arr[i]>secondLargest && arr[i]<largest){
+                    secondLargest = arr[i]
+                }
+            }
+            return secondLargest === -Infinity ? null : secondLargest;
+        }
+
+        console.log(secondLargest([45,80,90,65,90,70]))
+
+        // 2. remove  duplicate value from an array
+        Input : [101,102,103,101,104,102]
+        Output : [101,102,103,104]
+
+        function removeDuplicate(arr){
+            
+            let result = []
+            for(let i=0; i<arr.length; i++){
+                if(!result.includes(arr[i])){
+                    result.push(arr[i])
+                }
+            }
+
+            return result;
+        }
+
+        console.log(removeDuplicate([101,102,103,101,104,102]))
+
+        // 3. count the frequency of each character
+        Input : "Javascript"
+        Output : {
+            j:1
+            a:2
+            v:1
+            s:1
+            c:1
+            r:1
+            i:1
+            p:1
+            t:1
+        }
+
+        function countCharacter(str){
+            
+            let frequency = {}
+            for(let i=0; i<str.length; i++){
+                let char = str[i]
+                if (frequency[char]){
+                    frequency[char]++
+                }
+                else{
+                    frequency[char] = 1
+                }
+            }
+            return frequency
+        }
+
+        console.log(countCharacter("Javascript"))
+
+        // 4. reverse string
+        Input : "Hello"
+        Output : "olleH"
+
+        function reverseString(str){
+            let revString = ""
+            for (let i=str.length-1; i>=0; i--){
+                revString += str[i]
+            }
+
+            return revString
+        }
+
+        console.log(reverseString("Hello"))
+
+        // 5. find missing numbers in an array
+        Input : [1,2,3,5,6]
+        Output: 4
+
+        function findMissing(arr,n) {
+            let sum = 0
+            for (let i=0;i<arr.length;i++) {
+                sum+=arr[i]
+            }
+            return ((n*(n+1))/2) - sum
+        }
+
+        console.log(findMissing([1,2,3,5,6], 6))
+
+        // 6. check string for palindrome
+        Input : "madam"
+        Output : true
+
+        // two pointers: left and right
+        function isPalindrome(str) {
+            for (let i=0;i<str.length;i++) {
+                if (str[i] != str[str.length-i-1]) {
+                    return false
+                }
+            }
+            return true
+        }
+
+        console.log(isPalindrome("saippuakivikauppies"))
+
+        // 7. find maximum number in array
+        Input : [499, 999, 299, 1499, 799]
+        Output : 1499
+
+        function findMaximum(arr) {
+            let max = arr[0]
+
+            for (let i=1;i<arr.length;i++) {
+                if (arr[i] > max) {
+                    max = arr[i]
+                }
+            }
+            return max
+        }
+
+        console.log(findMaximum([499, 999, 299, 1499, 799]))
+
+        // 2 types of searches ---> linear & binary
+        // when unsorted array --> linear search
+        // when array is sorted --> binary search
+
+        // 8. search for data using linear search
+        Target : 103
+        Input : [101,102,103,104,105]
+        Output : 2
+
+        function searchTarget(arr,target) {
+            for (let i=0;i<arr.length;i++) {
+                if (arr[i] == target) {
+                    return i
+                }
+            }
+            return -1
+        }
+
+        console.log(searchTarget([101,102,103,104,105], 106))
+
+        // 9. move all zeroes to end
+        Input : [0,5,0,3,8,0,2]
+        Output : [5,3,8,2,0,0,0]
+
+        function moveZeroes(arr) {
+            let index = 0
+            for (let i=0; i<arr.length; i++) {
+                if (arr[i] != 0) {
+                    arr[index] = arr[i]
+                    index++
+                    arr[i] = 0
+                }
+            }
+            return arr
+        }
+
+        console.log(moveZeroes([0,5,0,3,8,0,2]))
+
+    </script>
+</body>
+</html>

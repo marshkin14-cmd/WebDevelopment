@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .top{
+            height: 300px;
+            width: 350px;
+            background-color: red;
+            border: 1px solid black;
+            border-radius: 12px;
+            margin: 10px;
+        }
+        /* .btm{
+            height: 400px;
+            width: 350px;
+        } */
+    </style>
+</head>
+<body>
+    <input id="myin" placeholder="Type something...">
+
+    <div class="top" id="mydiv">
+        <div class="btm">
+
+        </div>
+    </div>
+
+    <script>
+        const inputTag = document.getElementById("myin")
+
+        // keydown
+        // inputTag.addEventListener('keydown',(x)=>{
+        //     console.log('key pressed ', x.key)  //.key - keyboard key
+        // })
+
+        // keyup
+        // inputTag.addEventListener('keyup',(x)=>{
+        //     console.log('key pressed ', x.key)  //.key - keyboard key
+        // })
+
+        // onChange - change in value in input tag
+        inputTag.addEventListener('change',(x)=>{
+            console.log('value of input ', x.target.value)  //.key - keyboard key
+        })
+
+        const box = document.getElementById("mydiv")
+        box.addEventListener('mouseover', ()=>{
+            box.style.backgroundColor = 'green'
+            box.style.
+        })
+        box.addEventListener('mouseout', ()=>{
+            box.style.backgroundColor = 'yellow'
+        })
+    </script>
+</body>
+</html>
