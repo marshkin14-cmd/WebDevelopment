@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // localstorage - acts like permanent storage, stores large data
+
+        localStorage.clear()
+
+        localStorage.setItem("John" , ["Hello", "Good Morning", "How are you", 123456789])
+        localStorage.setItem("Cart", ["Shoes", "Tea", "Book"])
+
+        const cartItem = localStorage.getItem("Cart")
+        console.log(cartItem)
+    </script>
+</body>
+</html>
